@@ -1,4 +1,4 @@
-package com.spring.blog.configuration;
+package com.stockdpx.stockdpx.configuration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -13,9 +13,9 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final String[] AUTH_LIST = {
+            "/computador",
             "/",
-            "/",
-            "//{id}"
+            "/computador/computador{id}"
     };
 
     @Override

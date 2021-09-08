@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+    <!--CSS bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Computadores</title>
+</head>
+<body>
+<header>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Computador - Stock</a>
+            <a href="/computador" class="btn btn-primary" role="button">Computador</a>
+
+        </div>
+    </nav>
+</header>
+<section>
+    <div class="container" th:each="computador:${computador}"style="width:60%;padding-bottom:30px;">
+
+            <div class="row align-items-start">
+                <div class="col">
+                   <span>th:text=${computador.nome}</span>
+                </div>
+                <div class="col">
+                    <span>th:text=${computador.ram}</span>
+                </div>
+                <div class="col">
+                    <span>th:text=${computador.patrimonio}</span>
+                </div>
+
+             </div>
+    </div>
+
+</section>
+
+
+</body>
+</html>
